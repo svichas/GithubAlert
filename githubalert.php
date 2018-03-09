@@ -5,6 +5,7 @@
 * Project: https://github.com/svichas/GithubAlert
 * license: MIT
 */
+namespace GithubAlert;
 
 
 /**
@@ -14,8 +15,12 @@ class GithubAlert {
 
   public function api_serve() {
 
+    $
+
 
 
   }
 
 }
+$ga = new GithubAlert;
+$ga->api_serve();
