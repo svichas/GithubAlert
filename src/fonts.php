@@ -7,7 +7,7 @@
 */
 namespace GithubAlert\Core;
 
-class fonts {
+class Fonts {
 
   /* Variable to keep track of avaible fonts */
   public $fonts = [];

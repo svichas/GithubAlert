@@ -15,8 +15,6 @@ class GithubAlert {
 
   public function api_serve() {
 
-    $
-
 
 
   }
