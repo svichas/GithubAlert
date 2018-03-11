@@ -5,20 +5,9 @@
 * Project: https://github.com/svichas/GithubAlert
 * license: MIT
 */
-namespace GithubAlert;
 
-
-/**
-* Main GithubAlert class
-*/
-class GithubAlert {
-
-  public function api_serve() {
-
-
-
-  }
-
-}
-$ga = new GithubAlert;
-$ga->api_serve();
+// Require core files
+require 'src/controller.php';
+require 'src/fonts.php';
+require 'src/parameters.php';
+require 'src/githubalert.php';
