@@ -24,7 +24,7 @@ class ErrorHandler {
     // set content type to xml result
     Header::setContentType("application/xml");
     // print xml error in screen
-    print self::createErrorXML($error, "error");
+    print self::createErrorXML($error, "error", "500");
     // end php execution
     die;
   }
@@ -33,12 +33,14 @@ class ErrorHandler {
   * Method to create xml error response
   * @param string $message xml response message
   * @param string $type xml response type
+  * @param string $status HTTP status response code
   */
-  private static function createErrorXML($message="", $type="") {
+  private static function createErrorXML($message="", $type="", $status="") {
     // create php array to transform to xml form.
     $xmlArray = [
       $type => "type",
-      $message => "response"
+      $message => "response",
+      $status => "status"
     ];
     $xml = new \SimpleXMLElement('<root/>');
     array_walk_recursive($xmlArray, array($xml, 'addChild'));
