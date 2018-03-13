@@ -18,9 +18,19 @@ class Constructor {
   * @param int $fontSize font size of svg text
   */
   public static function constructContent($content="", $fontSize=18) {
+    $svgText = "<text x=\"300\" y=\"{$fontSize}\">";
 
+    // construct every line
+    // split svg text content into lines
+    $lines = str_split($content, 60);
+    foreach ($lines as $key => $line) {
+      $lineY = ($key+1) * $fontSize;
+      $svgText .= "<tspan x=\"300\" y=\"{$lineY}\">{$line}</tspan>";
+    }
 
+    $svgText .= "</text>";
 
+    return $svgText;
   }
 
 }

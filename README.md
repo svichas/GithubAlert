@@ -1,5 +1,6 @@
 # GithubAlert
 
+![api.svg](api.svg)
 
 ## Features
 1. Creates fancy SVG images with text messages

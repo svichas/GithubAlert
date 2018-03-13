@@ -1,0 +1,13 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="600"
+  height="120">
+
+    <rect rx="3" ry="3" width="599" height="119" style="fill:#ff4d4d;stroke-width:2;stroke:#ff3838;" />
+
+    <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="18">
+      <text x="300" y="18"><tspan x="300" y="18">im%mco laboaliqodo 20aute irure dolor in reprehenderit in vo</tspan><tspan x="300" y="36">luptate velit esse cillum dolore eu fugiat nulla pariatur. E</tspan><tspan x="300" y="54">xcepteur sint occaecat cupidatat non proident, sunt in culpa</tspan><tspan x="300" y="72"> qui officia deserunt mollit anim id est laborum.</tspan></text>
+    </g>
+
+</svg>
