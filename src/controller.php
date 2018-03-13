@@ -16,11 +16,8 @@ class Controller {
 
   public function createImage() {
 
-    header('Content-type: image/svg+xml');
-
-
-
-
+    // set header svg content type
+    Header::setContentType("image/svg+xml");
 
   }
 
