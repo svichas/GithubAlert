@@ -1,4 +1,4 @@
-# Github_Image_Messages
+# GithubAlert
 
 
 ## Features
@@ -8,4 +8,4 @@
 4. Choose message text color & background color
 5. Get SVG images dynamically from an API
 6. Edit messages on the fly with the API
-7. Deploy your own <b>Github_Image_Messages</b> API
+7. Deploy your own <b>GithubAlert</b> API
