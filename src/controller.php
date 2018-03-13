@@ -63,8 +63,8 @@ class Controller {
   * @param array $parametersArray parameters to bind
   */
   public function bindParameters($svgContent="", $parametersArray=[]) {
-    foreach ($parametersArray as $key => $paremeter) {
-      $svgContent = str_replace($key, $parameter, $svgContent);
+    foreach ($parametersArray as $key => $parameter) {
+      $svgContent = str_replace("{{{$key}}}", $parameter, $svgContent);
     }
     return $svgContent;
   }
