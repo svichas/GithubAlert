@@ -33,6 +33,8 @@ class Controller {
     $messageType = Parameters::get("message_type");
     $messageContent = Parameters::get("message");
     $fontSize = empty(Parameters::get("font_size")) ? 18 : Parameters::get("font_size");
+    $messageWidth = 1200;
+    $messageHeight = 220;
 
     // create type object
     $typeObject = new Type;
@@ -45,14 +47,13 @@ class Controller {
     // get type svg template
     $messageSvgContent = $typeObject->getTypeSvgContent($messageType);
 
-
-
-
     $messageSvgContent = $this->bindParameters($messageSvgContent, [
       "message" => $messageContent,
       "type" => $messageType,
       "font.size" => $fontSize,
-      "content" => Constructor::constructContent($messageContent, $fontSize)
+      "content" => Constructor::constructContent($messageContent, $messageWidth, $messageHeight, $fontSize),
+      "width" => $messageWidth,
+      "height" => $messageHeight
     ]);
 
     // print result
