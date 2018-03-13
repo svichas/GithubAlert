@@ -13,9 +13,14 @@ use GithubAlert\Core\Header;
 use GithubAlert\Core\ErrorHandler;
 use GithubAlert\Core\type;
 
+/**
+* Main class to handle/create svg message image
+*/
 class Controller {
 
-
+  /**
+  * Main method for creating svg message image
+  */
   public function createImage() {
 
     // check if parameters are set
@@ -28,12 +33,40 @@ class Controller {
     $messageType = Parameters::get("message_type");
     $messageContent = Parameters::get("message");
 
+    // create type object
     $typeObject = new Type;
 
     // check if message type exists
     if (!$typeObject->typeExists($messageType)) ErrorHandler::throwError("Invalid message type", "message error");
+    // check if message content is not empty
+    if (empty($messageContent)) ErrorHandler::throwError("Invalid message content", "message error");
+
+    // get type svg template
+    $messageSvgContent = $typeObject->getTypeSvgContent($messageType);
+
+    $messageSvgContent = $this->bindParameters($messageSvgContent, [
+      "message" => $messageContent,
+      "type" => $messageType
+    ]);
+
+    // print result
+    print $messageSvgContent;
+
+    return true;
+
+  }
 
 
+  /**
+  * Method to bind parameters to a svg content
+  * @param string $svgContent svg content to bind parameters to
+  * @param array $parametersArray parameters to bind
+  */
+  public function bindParameters($svgContent="", $parametersArray=[]) {
+    foreach ($parametersArray as $key => $paremeter) {
+      $svgContent = str_replace($key, $parameter, $svgContent);
+    }
+    return $svgContent;
   }
 
 

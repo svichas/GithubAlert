@@ -26,9 +26,19 @@ class Type {
 
   /**
   * Method to check if a message type exists.
+  * @param string $messageType message type
   */
-  public function typeExists($messageType) {
+  public function typeExists($messageType="") {
     return in_array($messageType, $this->types);
+  }
+
+  /**
+  * Method to get message type svg content
+  * @param string $messageType message type
+  */
+  public function getTypeSvgContent($messageType="") {
+    if ($this->typeExists($messageType)) return file_get_contents(dirname(__file__) . "/types/{$messageType}.svg");
+    return false;
   }
 
 }
