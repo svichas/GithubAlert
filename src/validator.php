@@ -7,10 +7,10 @@
 */
 namespace GithubAlert\Core;
 
-/**
-* Main class for message types
-*/
-class Type {
+class Validator {
+
+
   
+
 
 }
