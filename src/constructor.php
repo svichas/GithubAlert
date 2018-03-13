@@ -25,7 +25,7 @@ class Constructor {
 
     // construct every line
     // split svg text content into lines
-    $lines = str_split($content, 60);
+    $lines = str_split($content, $messageWidth/($fontSize/1.6));
     foreach ($lines as $key => $line) {
       $lineY = ($key+1) * $fontSize;
       $svgText .= "<tspan x=\"{$halfMessageWidth}\" y=\"{$lineY}\">{$line}</tspan>";

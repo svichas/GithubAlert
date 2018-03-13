@@ -34,7 +34,8 @@ class Controller {
     $messageContent = Parameters::get("message");
     $fontSize = empty(Parameters::get("font_size")) ? 18 : Parameters::get("font_size");
     $messageWidth = 1200;
-    $messageHeight = 220;
+    $linesCount = count(str_split($messageContent, $messageWidth/($fontSize/1.6)));
+    $messageHeight = $linesCount*($fontSize+2);
 
     // create type object
     $typeObject = new Type;
@@ -75,6 +76,5 @@ class Controller {
     }
     return $svgContent;
   }
-
 
 }
