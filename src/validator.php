@@ -7,10 +7,26 @@
 */
 namespace GithubAlert\Core;
 
+use GithubAlert\Core\Parameters;
+
 class Validator {
 
+  public static $requiredParameters = [
+    "message_type",
+    "message"
+  ];
 
-  
+  /**
+  * Method for checking if required parameters are passed by the client
+  */
+  public static function checkParameters() {
 
+    // loop required parameters
+    foreach (self::$requiredParameters as $parameter) {
+      if (empty(Parameters::get($parameter))) return true;
+    }
+
+    return false;
+  }
 
 }

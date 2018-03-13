@@ -18,13 +18,14 @@ class ErrorHandler {
 
   /**
   * Main method for throwing xml error to the client.
-  * @param string $error error message to show
+  * @param string $message error message to show
+  * @param string $type xml response type
   */
-  public static function throwError($error="") {
+  public static function throwError($message="", $type="error") {
     // set content type to xml result
     Header::setContentType("application/xml");
     // print xml error in screen
-    print self::createErrorXML($error, "error", "500");
+    print self::createErrorXML($message, $type, "500");
     // end php execution
     die;
   }

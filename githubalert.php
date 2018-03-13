@@ -13,4 +13,5 @@ require 'src/parameters.php';
 require 'src/header.php';
 require 'src/type.php';
 require 'src/errorhandler.php';
+require 'src/validator.php';
 require 'src/githubalert.php';
