@@ -7,22 +7,10 @@
 */
 namespace GithubAlert\Core;
 
-
-use GithubAlert\Core\Parameters;
-
-
-class Controller {
-
-
-  public function createImage() {
-
-    header('Content-type: image/svg+xml');
-
-
-
-
-
-  }
+/**
+* Main class for message types
+*/
+class Type {
 
 
 }
