@@ -4,7 +4,7 @@
   width="{{width}}"
   height="{{height}}">
 
-    <rect rx="6" ry="6" width="{{width}}" height="{{height}}" style="fill:#ff4d4d;stroke-width:2;stroke:#ff3838;" />
+    <rect rx="10" ry="10" width="{{width}}" height="{{height}}" style="fill:#ff4d4d;stroke-width:5;stroke:#ff3838;" />
 
     <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="{{font.size}}">
       {{content}}
