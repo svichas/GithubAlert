@@ -17,17 +17,17 @@ class Constructor {
   * @param string $content content to transform to svg text
   * @param int $fontSize font size of svg text
   */
-  public static function constructContent($content="", $messageWidth=1200, $messageHeight=220, $fontSize=18) {
+  public static function constructContent($content="", $messageWidth=1200, $messageHeight=220, $padding=10, $fontSize=18) {
 
     $halfMessageWidth = $messageWidth/2;
 
-    $svgText = "<text x=\"{$halfMessageWidth}\" y=\"{$fontSize}\">";
+    $svgText = "<text x=\"{$halfMessageWidth}\" y=\"0\">";
 
     // construct every line
     // split svg text content into lines
-    $lines = str_split($content, $messageWidth/($fontSize/1.6));
+    $lines = str_split($content, $messageWidth/($fontSize/1.4));
     foreach ($lines as $key => $line) {
-      $lineY = ($key+1) * $fontSize;
+      $lineY = (($key+1) * $fontSize) + $padding;
       $svgText .= "<tspan x=\"{$halfMessageWidth}\" y=\"{$lineY}\">{$line}</tspan>";
     }
 
