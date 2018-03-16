@@ -1,0 +1,13 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="{{width}}"
+  height="{{height}}">
+
+    <rect rx="10" ry="10" width="{{width}}" height="{{height}}" style="fill:#2ECC40;stroke-width:5;stroke:#089800;" />
+
+    <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="{{font.size}}">
+      {{content}}
+    </g>
+
+</svg>
