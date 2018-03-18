@@ -38,7 +38,7 @@ class Controller {
     $padding = empty(Parameters::get("padding")) ? 10 : Parameters::get("padding");
 
     // calculate svg width and height.
-    $messageWidth = 1500;
+    $messageWidth = 1000;
     $linesCount = count(str_split($messageContent, ($messageWidth/$fontSize*Constants::LINE_DIVIDER)-($padding/2)));
 
     $messageWidth += $padding * 2;
