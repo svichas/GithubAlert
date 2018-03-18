@@ -1,8 +1,6 @@
 # GithubAlert
 
-![api.svg](http://vichas.org/api/api.php?message=Ths%20project%20is%20outfghf%20ghfg%20hfgh-f%20gdsfg%20dfg%20%20dfg%20dfg%fg%20dfjgh%20dghfgjhdfgd%20fjhsdfsdskjhdf%20skdfg%20sdjfkhgsdjhgf%20sjdhgfsdjhfgsdfjhg%20dfgm%20dfg%20,.,%20dfgfg0fghroject%20is%20no%20longer%20maintained.&message_type=error&font_size=33)
-
-
+![api.svg](http://vps.vichas.org/?message=GithubAlert%20API%20messages&message_type=success&font_size=42)
 
 
 ## Features
