@@ -12,6 +12,7 @@ use GithubAlert\Core\Parameters;
 use GithubAlert\Core\Header;
 use GithubAlert\Core\ErrorHandler;
 use GithubAlert\Core\type;
+use GithubAlert\Core\Constants;
 
 /**
 * Main class to handle/create svg message image
@@ -36,8 +37,8 @@ class Controller {
     $padding = empty(Parameters::get("padding")) ? 10 : Parameters::get("padding");
 
     // calculate svg width and height.
-    $messageWidth = 1000;
-    $linesCount = count(str_split($messageContent, $messageWidth/$fontSize*1.4));
+    $messageWidth = 1500;
+    $linesCount = count(str_split($messageContent, ($messageWidth/$fontSize*Constants::LINE_DIVIDER)-($padding/2)));
 
     $messageWidth += $padding * 2;
     $messageHeight = $linesCount*($fontSize)+($padding*2)+($fontSize/2);
