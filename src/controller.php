@@ -30,9 +30,10 @@ class Controller {
     // set header svg content type
     Header::setContentType("image/svg+xml");
 
-    // get parameters
-    $messageType = Parameters::get("message_type");
+    // get required parameters (check 'Core/Validator')
     $messageContent = Parameters::get("message");
+    // get optinal parameters
+    $messageType = empty(Parameters::get("message_type")) ? "default" : Parameters::get("message_type");
     $fontSize = empty(Parameters::get("font_size")) ? 18 : Parameters::get("font_size");
     $padding = empty(Parameters::get("padding")) ? 10 : Parameters::get("padding");
 

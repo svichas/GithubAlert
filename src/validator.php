@@ -12,7 +12,6 @@ use GithubAlert\Core\Parameters;
 class Validator {
 
   public static $requiredParameters = [
-    "message_type",
     "message"
   ];
 
