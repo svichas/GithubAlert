@@ -15,6 +15,6 @@
 7. Deploy your own <b>GithubAlert</b> API
 
 
-## Requirements for deploying GithubAlert api
+## Requirements for deploying GithubAlert API
 1. php-xml module installed
 2. php version >= 7
