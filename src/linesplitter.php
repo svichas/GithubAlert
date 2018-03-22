@@ -8,11 +8,10 @@
 namespace GithubAlert\Core;
 
 /**
-* Main class for contstants
+* Main line splitter
 */
-class Constants {
+class LineSplitter {
 
-  /** All api constants here **/
-  const LINE_DIVIDER = 1.45;
+
 
 }

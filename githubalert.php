@@ -7,6 +7,7 @@
 */
 
 // Require core files
+require 'src/linesplitter.php';
 require 'src/constants.php';
 require 'src/controller.php';
 require 'src/fonts.php';
