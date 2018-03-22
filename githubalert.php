@@ -6,7 +6,6 @@
 * License: MIT
 */
 
-echo imagefontwidth(100);
 
 /**
 * Check if GithubAlert is already defined
