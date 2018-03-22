@@ -6,6 +6,11 @@
 * license: MIT
 */
 
+/**
+* Check if GithubAlert is already defined
+*/
+if (class_exists("GithubAlert")) return;
+
 // Require core files
 require 'src/linesplitter.php';
 require 'src/constants.php';
