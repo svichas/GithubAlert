@@ -6,10 +6,14 @@
 * License: MIT
 */
 
+echo imagefontwidth(100);
+
 /**
 * Check if GithubAlert is already defined
 */
 if (class_exists("GithubAlert")) return;
+
+
 
 // Require core files
 require 'src/linesplitter.php';
