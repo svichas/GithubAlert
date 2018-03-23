@@ -33,6 +33,7 @@ class LineSplitter {
       $currentCharacter = substr($message, $i, 1);
       $nextCharacter    = mb_strlen($message) >= $i ? substr($message, $i+1, 1) : "";
 
+      // start new line when line width >= ? and space is found max width ?+10
 
 
 
