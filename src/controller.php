@@ -11,7 +11,7 @@ use GithubAlert\Core\Validator;
 use GithubAlert\Core\Parameters;
 use GithubAlert\Core\Header;
 use GithubAlert\Core\ErrorHandler;
-use GithubAlert\Core\type;
+use GithubAlert\Core\Type;
 use GithubAlert\Core\Constants;
 
 /**
