@@ -18,7 +18,6 @@ if (class_exists("GithubAlert")) return;
 require 'src/linesplitter.php';
 require 'src/constants.php';
 require 'src/controller.php';
-require 'src/fonts.php';
 require 'src/parameters.php';
 require 'src/header.php';
 require 'src/type.php';
