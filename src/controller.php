@@ -32,10 +32,12 @@ class Controller {
 
     // get required parameters (check 'Core/Validator')
     $messageContent = Parameters::get("message");
+
     // get optinal parameters
     $messageType = empty(Parameters::get("message_type")) ? "default" : Parameters::get("message_type");
     $fontSize = empty(Parameters::get("font_size")) ? 18 : Parameters::get("font_size");
     $padding = empty(Parameters::get("padding")) ? 10 : Parameters::get("padding");
+    $font = empty(Parameters::get("font")) ? "Roboto-Regular" : Parameters::get("font");
 
     // calculate svg width and height.
     $messageWidth = 1000;
@@ -61,7 +63,9 @@ class Controller {
       "font.size" => $fontSize,
       "content" => Constructor::constructContent($messageContent, $messageWidth, $messageHeight, $padding, $fontSize),
       "width" => $messageWidth,
-      "height" => $messageHeight
+      "height" => $messageHeight,
+      "font.name" => $font,
+      "font.url" => "fonts/{$font}.ttf"
     ]);
 
     // print result
