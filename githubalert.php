@@ -16,7 +16,6 @@ if (class_exists("GithubAlert")) return;
 
 // Require core files
 require 'src/linesplitter.php';
-require 'src/constants.php';
 require 'src/controller.php';
 require 'src/parameters.php';
 require 'src/header.php';

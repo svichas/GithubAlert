@@ -7,7 +7,6 @@
 */
 namespace GithubAlert\Core;
 
-use GithubAlert\Core\Constants;
 use GithubAlert\Core\LineSplitter;
 
 /**
