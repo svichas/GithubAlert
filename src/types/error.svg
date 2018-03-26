@@ -3,10 +3,18 @@
   xmlns:xlink="http://www.w3.org/1999/xlink"
   width="{{width}}"
   height="{{height}}">
+    <defs>
+      <style type="text/css">
+         @font-face {
+           font-family: {{font.name}};
+           src: url({{font.url}});
+         }
+       </style>
+    </defs>
 
     <rect rx="10" ry="10" width="{{width}}" height="{{height}}" style="fill:#ff4d4d;stroke-width:5;stroke:#ff3838;" />
 
-    <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="{{font.size}}">
+    <g fill="#fff" text-anchor="middle" font-family="{{font.name}},sans-serif" font-size="{{font.size}}">
       {{content}}
     </g>
 
