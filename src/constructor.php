@@ -8,6 +8,7 @@
 namespace GithubAlert\Core;
 
 use GithubAlert\Core\Constants;
+use GithubAlert\Core\LineSplitter;
 
 /**
 * Main class for constructing things
@@ -27,7 +28,9 @@ class Constructor {
 
     // construct every line
     // split svg text content into lines
-    $lines = str_split($content, ($messageWidth/($fontSize/Constants::LINE_DIVIDER))-($padding/2));
+    //$lines = str_split($content, ($messageWidth/($fontSize/Constants::LINE_DIVIDER))-($padding/2));
+    $lines = LineSplitter::splitLines($content, $messageWidth, $fontSize);
+
     foreach ($lines as $key => $line) {
       $lineY = (($key+1) * $fontSize) + $padding;
       $svgText .= "<tspan x=\"{$halfMessageWidth}\" y=\"{$lineY}\">{$line}</tspan>";

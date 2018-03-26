@@ -18,10 +18,9 @@ class LineSplitter {
   * @param string $message var for message to split to lines
   * @param integer $width message container width
   */
-  public static function splitLines($message="", $width=1000) {
+  public static function splitLines($message="", $width=1000, $fontSize=12) {
 
     // initilise variables
-    $currentLineLength = 0;
     $currentLineWidth  = 0;
     $currentLine       = 0;
     $lines             = [];
@@ -34,10 +33,17 @@ class LineSplitter {
       $nextCharacter    = mb_strlen($message) >= $i ? substr($message, $i+1, 1) : "";
 
       // start new line when line width >= ? and space is found max width ?+10
+      $characterWidth     = ($fontSize * 3)/4;
+      $currentLineWidth  += $characterWidth;
 
+      if (($currentLineWidth >= $width - 100 && $currentCharacter == " ")
+        || ($currentLineWidth >= $width - $fontSize)) {
+          $currentLineWidth = 0;
+          $currentLine++;
+        }
 
-
-      $lines[$currentLine] = $currentCharacter;
+      if (isset($lines[$currentLine])) $lines[$currentLine] .= $currentCharacter;
+      else $lines[$currentLine] = $currentCharacter;
 
     }
 

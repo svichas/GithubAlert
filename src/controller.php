@@ -9,6 +9,7 @@ namespace GithubAlert\Core;
 
 use GithubAlert\Core\Validator;
 use GithubAlert\Core\Parameters;
+use GithubAlert\Core\LineSplitter;
 use GithubAlert\Core\Header;
 use GithubAlert\Core\ErrorHandler;
 use GithubAlert\Core\Type;
@@ -41,7 +42,9 @@ class Controller {
 
     // calculate svg width and height.
     $messageWidth = 1000;
-    $linesCount = count(str_split($messageContent, ($messageWidth/$fontSize*Constants::LINE_DIVIDER)-($padding/2)));
+
+    //$linesCount = count(str_split($messageContent, ($messageWidth/$fontSize*Constants::LINE_DIVIDER)-($padding/2)));
+    $linesCount = count(LineSplitter::splitLines($messageContent, $messageWidth, $fontSize));
 
     $messageWidth += $padding * 2;
     $messageHeight = $linesCount*($fontSize)+($padding*2)+($fontSize/2);
